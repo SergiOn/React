@@ -5,4 +5,7 @@ let jsx =
     <p>A javascript library for building user interface</p>
 </div>;
 
-ReactDOM.render(jsx, document.getElementById('root'));
+let dom = ReactDOM.render(jsx, document.getElementById('root'));
+
+console.log(jsx);
+console.log(dom);
