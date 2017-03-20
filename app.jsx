@@ -8,4 +8,4 @@ function Hero() {
     );
 }
 
-ReactDOM.render(<Hero />, document.getElementById('root'));
+ReactDOM.render(React.createElement(Hero, null), document.getElementById('root'));
