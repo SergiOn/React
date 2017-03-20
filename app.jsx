@@ -1,11 +1,15 @@
-function Hero() {
+function Hero(props) {
     return (
         <div className="container">
-            <img src="https://facebook.github.io/react/img/logo.svg" />
-            <h1>React</h1>
-            <p>A javascript library for building user interface</p>
+            <img src={props.imageUrl} />
+            <h1>{props.title}</h1>
+            <p>{props.subtitle}</p>
         </div>
     );
 }
 
-ReactDOM.render(React.createElement(Hero, null), document.getElementById('root'));
+ReactDOM.render(<Hero title="React"
+                      subtitle="A javascript library for building user interface"
+                      imageUrl="https://facebook.github.io/react/img/logo.svg"
+                />,
+                document.getElementById('root'));
