@@ -33,17 +33,30 @@ let App = React.createClass({
     render: function () {
         return (
             <div className="container-wrapper">
-                <Hero title="React"
-                      subtitle="A javascript library for building user interface"
-                      imageUrl="https://facebook.github.io/react/img/logo.svg"
-                />
-                <Hero title="Angular 2"
-                      subtitle="One framework"
-                      imageUrl="https://angular.io/resources/images/logos/angular2/angular.svg"
-                />
+                { this.props.heroes.map(function (hero) {
+                    return (
+                        <Hero title={ hero.title }
+                              subtitle={ hero.subtitle }
+                              imageUrl={ hero.imageUrl }
+                        />
+                    );
+                }) }
             </div>
         )
     }
 });
 
-ReactDOM.render(<App />, document.getElementById('root'));
+let data = [
+    {
+        title: 'React',
+        subtitle: "A javascript library for building user interface",
+        imageUrl: "https://facebook.github.io/react/img/logo.svg"
+    },
+    {
+        title: "Angular 2",
+        subtitle: "One framework",
+        imageUrl: "https://angular.io/resources/images/logos/angular2/angular.svg"
+    }
+];
+
+ReactDOM.render(<App heroes={data} />, document.getElementById('root'));
