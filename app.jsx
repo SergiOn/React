@@ -29,15 +29,21 @@ let Hero = React.createClass({
     }
 });
 
-ReactDOM.render(
-    <div className="container-wrapper">
-        <Hero title="React"
-              subtitle="A javascript library for building user interface"
-              imageUrl="https://facebook.github.io/react/img/logo.svg"
-        />
-        <Hero title="Angular 2"
-              subtitle="One framework"
-              imageUrl="https://angular.io/resources/images/logos/angular2/angular.svg"
-        />
-    </div>,
-    document.getElementById('root'));
+let App = React.createClass({
+    render: function () {
+        return (
+            <div className="container-wrapper">
+                <Hero title="React"
+                      subtitle="A javascript library for building user interface"
+                      imageUrl="https://facebook.github.io/react/img/logo.svg"
+                />
+                <Hero title="Angular 2"
+                      subtitle="One framework"
+                      imageUrl="https://angular.io/resources/images/logos/angular2/angular.svg"
+                />
+            </div>
+        )
+    }
+});
+
+ReactDOM.render(<App />, document.getElementById('root'));
