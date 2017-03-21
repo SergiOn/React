@@ -1,3 +1,12 @@
+let ImageCounter = function (props) {
+    return (
+        <div className="image-counter">
+            <div className="count">{props.count}</div>
+            <img src={props.imageUrl} onClick={props.onCount} />
+        </div>
+    );
+};
+
 let Hero = React.createClass({
     getInitialState: function () {
         return {
@@ -7,16 +16,12 @@ let Hero = React.createClass({
 
     handleClick: function () {
         this.setState({ count: this.state.count + 1 });
-        // this.state.count += 1;
-        // console.log(this.state.count);
-        // console.log('click');
     },
 
     render: function () {
         return (
             <div className="container">
-                <div className="count">{this.state.count}</div>
-                <img src={this.props.imageUrl} onClick={this.handleClick} />
+                <ImageCounter imageUrl={this.props.imageUrl} count={this.state.count} onCount={this.handleClick} />
                 <h1>{this.props.title}</h1>
                 <p>{this.props.subtitle}</p>
             </div>
