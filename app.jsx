@@ -35,9 +35,11 @@ let App = React.createClass({
             <div className="container-wrapper">
                 { this.props.heroes.map(function (hero) {
                     return (
-                        <Hero title={ hero.title }
-                              subtitle={ hero.subtitle }
-                              imageUrl={ hero.imageUrl }
+                        <Hero
+                            key={hero.id}
+                            title={ hero.title }
+                            subtitle={ hero.subtitle }
+                            imageUrl={ hero.imageUrl }
                         />
                     );
                 }) }
@@ -48,21 +50,25 @@ let App = React.createClass({
 
 let data = [
     {
+        id: 1,
         title: 'React',
         subtitle: "A javascript library for building user interface",
         imageUrl: "https://facebook.github.io/react/img/logo.svg"
     },
     {
+        id: 2,
         title: "Angular 2",
         subtitle: "One framework",
         imageUrl: "https://angular.io/resources/images/logos/angular2/angular.svg"
     },
     {
+        id: 3,
         title: "Ember",
         subtitle: "A framework for creating ambitious web applications",
         imageUrl: "https://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200"
     },
     {
+        id: 4,
         title: "Vue",
         subtitle: "The Progressive JavaScript Framework",
         imageUrl: "https://vuejs.org/images/logo.png"
