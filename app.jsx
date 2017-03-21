@@ -56,6 +56,16 @@ let data = [
         title: "Angular 2",
         subtitle: "One framework",
         imageUrl: "https://angular.io/resources/images/logos/angular2/angular.svg"
+    },
+    {
+        title: "Ember",
+        subtitle: "A framework for creating ambitious web applications",
+        imageUrl: "https://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200"
+    },
+    {
+        title: "Vue",
+        subtitle: "The Progressive JavaScript Framework",
+        imageUrl: "https://vuejs.org/images/logo.png"
     }
 ];
 
